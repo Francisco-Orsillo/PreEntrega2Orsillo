@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <ItemListContainer />
+      <ItemListContainer greeting={"Bienvenido a Bass Center"} />
       <ProductCard title="Fender Jazz Bass" price={60000} />
       <ProductCard title="Fender Precision" price={45000} />
       <ProductCard title="Fender Dimension" price={73000} />
