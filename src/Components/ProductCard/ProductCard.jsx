@@ -1,8 +1,8 @@
-const ProductCard = (props) => {
+const ProductCard = ({ title, price = "Precio no disponible" }) => {
   return (
     <div>
-      <h2>{props.title}</h2>
-      <h2>{props.price}</h2>
+      <h2>{title}</h2>
+      <h2>{price}</h2>
     </div>
   );
 };

@@ -1,7 +1,9 @@
+import { MdOutlineShoppingCart } from "react-icons/md";
+
 const CartWidget = () => {
   return (
     <div>
-      <h3>Carrito</h3>
+      <MdOutlineShoppingCart color="white" size="4em" />
     </div>
   );
 };
