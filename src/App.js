@@ -9,6 +9,9 @@ function App() {
       <Navbar />
       <ItemListContainer />
       <ProductCard />
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
       <Footer />
     </div>
   );

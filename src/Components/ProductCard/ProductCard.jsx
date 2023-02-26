@@ -1,5 +1,9 @@
 const ProductCard = () => {
-  return <div>ProductCard</div>;
+  return (
+    <div>
+      <h2>Producto 1</h2>
+    </div>
+  );
 };
 
 export default ProductCard;
