@@ -12,9 +12,10 @@ export const Navbar = () => {
       />
 
       <ul className={styles.listNavbar}>
-        <li>Guitarras</li>
-        <li>Bajos</li>
-        <li>Amplificadores</li>
+        <a href="#">Bajos</a>
+        <a href="#">Cuerdas</a>
+        <a href="#">Amplificadores</a>
+        <a href="#">Contacto</a>
       </ul>
 
       <CartWidget />
