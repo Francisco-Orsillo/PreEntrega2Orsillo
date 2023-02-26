@@ -1,13 +1,18 @@
-
-
+import { Footer } from "./Components/Footer/Footer";
+import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
+import { Navbar } from "./Components/Navbar/Navbar";
+import ProductCard from "./Components/ProductCard/ProductCard";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1> AaRrGgHh </h1>
-        <h2> BbEeRrGgMmAaNn</h2>
-      </header>
+    <div>
+      <Navbar />
+      <ItemListContainer />
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
+      <Footer />
     </div>
   );
 }
