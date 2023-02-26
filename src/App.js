@@ -8,10 +8,10 @@ function App() {
     <div>
       <Navbar />
       <ItemListContainer />
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
+      <ProductCard title="Fender Jazz Bass" price={60000} />
+      <ProductCard title="Fender Precision" price={45000} />
+      <ProductCard title="Fender Dimension" price={73000} />
+      <ProductCard title="Musicman Stingray" price={99000} />
       <Footer />
     </div>
   );
