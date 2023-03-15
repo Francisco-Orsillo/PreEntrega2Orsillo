@@ -1,13 +1,35 @@
 import React from "react";
 import styles from "./Item.module.css";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 
 const Item = ({ element }) => {
   return (
-    <div className={styles.container}>
-      <img className={styles.image} src={element.img} alt="" />
-      <h2>{element.title}</h2>
-      <h3>{element.price}</h3>
-    </div>
+    <Card sx={{ width: 300, height: 450 }}>
+      <CardMedia
+        component="img"
+        alt="green iguana"
+        height="300"
+        image={element.img}
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          {element.title}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {element.description}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small" variant="contained">
+          Mas info
+        </Button>
+      </CardActions>
+    </Card>
   );
 };
 
