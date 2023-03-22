@@ -1,11 +1,3 @@
-/* const ItemListContainer = ({ greeting }) => {
-  return (
-    <div>
-      <h3>{greeting} </h3>
-    </div>
-  );
-}; */
-
 import { useState, useEffect } from "react";
 import { products } from "../../productsMock";
 import ItemList from "../ItemList/ItemList";

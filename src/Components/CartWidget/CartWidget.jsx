@@ -1,10 +1,13 @@
 import { MdOutlineShoppingCart } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const CartWidget = () => {
   return (
-    <div>
-      <MdOutlineShoppingCart color="white" size="4em" />
-    </div>
+    <Link to="/cart">
+      <div>
+        <MdOutlineShoppingCart color="white" size="4em" />
+      </div>
+    </Link>
   );
 };
 
