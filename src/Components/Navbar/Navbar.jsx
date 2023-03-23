@@ -15,10 +15,9 @@ export const Navbar = () => {
       </Link>
 
       <ul className={styles.listNavbar}>
-        <a href="#">Bajos</a>
-        <a href="#">Cuerdas</a>
-        <a href="#">Amplificadores</a>
-        <a href="#">Contacto</a>
+        <Link to="/">Todos</Link>
+        <Link to="/category/pasivos">Bajos Pasivos</Link>
+        <Link to="/category/activos">Bajos Activos</Link>
       </ul>
 
       <CartWidget />
