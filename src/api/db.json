@@ -1,0 +1,24 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Fender Jazz Bass",
+      "img": "https://res.cloudinary.com/drftutaye/image/upload/v1677377993/fenderjazz_i1ezoy.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Fender Precision",
+      "img": "https://res.cloudinary.com/drftutaye/image/upload/v1677377993/fenderpbass_jsh5tf.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Fender Dimension",
+      "img": "https://res.cloudinary.com/drftutaye/image/upload/v1677377993/fenderdimension_eyquqe.jpg"
+    },
+    {
+      "id": "4",
+      "title": "Musicman Stingray",
+      "img": "https://res.cloudinary.com/drftutaye/image/upload/v1677377995/musicmanstingray_qyvgpc.png"
+    }
+  ]
+}
