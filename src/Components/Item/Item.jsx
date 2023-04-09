@@ -17,7 +17,7 @@ const Item = ({ element }) => {
           {element.title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {element.description}
+          {element.price}
         </Typography>
       </CardContent>
       <CardActions>

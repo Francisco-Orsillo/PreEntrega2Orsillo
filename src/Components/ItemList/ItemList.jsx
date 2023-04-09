@@ -6,7 +6,7 @@ const ItemList = ({ items }) => {
   return (
     <div
       style={{
-        backgroundColor: "yellow",
+        backgroundColor: "#F9EDBB",
         display: "flex",
         width: "100%",
         minHeight: "100vh",

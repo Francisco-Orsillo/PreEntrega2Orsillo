@@ -1,32 +1,53 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { products } from "../../productsMock";
+
 import ItemList from "../ItemList/ItemList";
+import MoonLoader from "react-spinners/MoonLoader";
+import { db } from "../../firebaseConfig";
+import { collection, getDocs, query, where } from "firebase/firestore";
+
+const override = {
+  display: "block",
+  margin: "0 auto",
+  borderColor: "red",
+};
 
 const ItemListContainer = () => {
   const { categoryName } = useParams();
 
   const [items, setItems] = useState([]);
 
-  const productosFiltrados = products.filter(
-    (elemento) => elemento.category === categoryName
-  );
-
   useEffect(() => {
-    const productList = new Promise((resolve, reject) => {
-      resolve(categoryName ? productosFiltrados : products);
-    });
+    const itemsCollection = collection(db, "products");
+    let consulta = undefined;
 
-    productList
-      .then((res) => {
-        setItems(res);
-      })
-      .catch((error) => {
-        console.log(error);
+    if (categoryName) {
+      const q = query(itemsCollection, where("category", "==", categoryName));
+      consulta = getDocs(q);
+    } else {
+      consulta = getDocs(itemsCollection);
+    }
+
+    consulta.then((res) => {
+      let products = res.docs.map((product) => {
+        return { ...product.data(), id: product.id };
       });
+      setItems(products);
+    });
   }, [categoryName]);
 
-  console.log(items);
+  if (items.length === 0) {
+    return (
+      <MoonLoader
+        color={"#9d2424"}
+        //loading={loading}
+        cssOverride={override}
+        size={200}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />
+    );
+  }
 
   return (
     <div>
