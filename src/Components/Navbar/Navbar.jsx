@@ -7,6 +7,8 @@ import { db } from "../../firebaseConfig";
 
 export const Navbar = ({ children }) => {
   const [categoryList, setCategoryList] = useState([]);
+  //const [cat, setCat] = useState([]);
+
   useEffect(() => {
     const itemsCollection = collection(db, "categories");
     getDocs(itemsCollection).then((res) => {
@@ -14,6 +16,16 @@ export const Navbar = ({ children }) => {
         return { ...category.data(), id: category.id };
       });
       setCategoryList(arrayCategories);
+
+      // const firstCategory =
+      //   categoryList.length > 0 &&
+      //   categoryList.find((e) => e.title === "Todos");
+      // const otherCategory =
+      //   categoryList.length > 0 &&
+      //   categoryList.filter((e) => e.title !== "Todos");
+      //  if (categoryList.length > 0) {
+      //    setCat([firstCategory, ...otherCategory]);
+      //  }
     });
   }, []);
 
