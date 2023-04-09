@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 import { CartContext } from "../../context/CartContext";
 import { getDoc, collection, doc } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
+import ItemDetail from "../ItemDetail/ItemDetail";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
@@ -39,16 +40,11 @@ const ItemDetailContainer = () => {
   let quantity = getQuantityById(Number(id));
 
   return (
-    <div>
-      <h1> {productSelected.title} </h1>
-      <h2> {productSelected.price}</h2>
-      <img src={productSelected.img} alt="" />
-      <ItemCount
-        stock={productSelected.stock}
-        onAdd={onAdd}
-        initial={quantity}
-      />
-    </div>
+    <ItemDetail
+      productSelected={productSelected}
+      onAdd={onAdd}
+      quantity={quantity}
+    />
   );
 };
 
